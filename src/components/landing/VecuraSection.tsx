@@ -65,7 +65,7 @@ export default function VecuraSection() {
   return (
     <section
       id="platform"
-      className="py-32 relative overflow-hidden bg-background"
+      className="py-12 md:py-16 relative overflow-hidden bg-background"
     >
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -74,14 +74,13 @@ export default function VecuraSection() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="mb-20">
+        <div className="mb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-2 mb-4"
+            className="flex items-center gap-2 mb-2"
           >
-            <div className="h-px w-8 bg-primary"></div>
-            <span className="text-primary font-mono text-sm tracking-wider uppercase">
+            <span className="text-primary font-mono text-xs tracking-wider uppercase">
               The AI Stack
             </span>
           </motion.div>
@@ -90,7 +89,7 @@ export default function VecuraSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
+            className="text-3xl md:text-5xl font-bold mb-4 tracking-tight"
           >
             VECURA<span className="text-primary">.</span>
           </motion.h2>
@@ -99,14 +98,14 @@ export default function VecuraSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-white/60 max-w-2xl leading-relaxed"
+            className="text-base md:text-lg text-white/60 max-w-2xl leading-relaxed"
           >
             A complete, end-to-end AI operating system for life science
             innovation. From target to clinic, simplified.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
           {/* Left Side: Pipeline Navigation */}
           <div className="lg:col-span-5 flex flex-col justify-center space-y-2">
             {features.map((feature, index) => (
@@ -114,7 +113,7 @@ export default function VecuraSection() {
                 key={feature.id}
                 onClick={() => setActiveFeature(index)}
                 className={cn(
-                  "group relative w-full text-left p-6 transition-all duration-300 rounded-lg border border-transparent",
+                  "group relative w-full text-left p-3 lg:p-4 transition-all duration-300 rounded-lg border border-transparent",
                   activeFeature === index
                     ? "bg-white/5 border-white/10"
                     : "hover:bg-white/5 hover:border-white/5",
@@ -131,7 +130,7 @@ export default function VecuraSection() {
                 <div className="relative z-10 flex items-baseline gap-4">
                   <span
                     className={cn(
-                      "font-mono text-sm transition-colors duration-300",
+                      "font-mono text-xs transition-colors duration-300",
                       activeFeature === index
                         ? "text-primary"
                         : "text-white/30 group-hover:text-white/50",
@@ -141,7 +140,7 @@ export default function VecuraSection() {
                   </span>
                   <h3
                     className={cn(
-                      "text-xl font-bold transition-colors duration-300",
+                      "text-lg font-bold transition-colors duration-300",
                       activeFeature === index
                         ? "text-white"
                         : "text-white/40 group-hover:text-white",
@@ -153,10 +152,10 @@ export default function VecuraSection() {
 
                 <div
                   className={cn(
-                    "relative z-10 pl-9 mt-2 text-sm transition-colors duration-300 max-w-md",
+                    "relative z-10 pl-9 mt-1 text-xs text-white/60 transition-colors duration-300 max-w-md line-clamp-2",
                     activeFeature === index
-                      ? "text-white/70"
-                      : "text-white/30 group-hover:text-white/50",
+                      ? "text-white/80"
+                      : "text-white/40 group-hover:text-white/60",
                   )}
                 >
                   {feature.description}
@@ -166,7 +165,7 @@ export default function VecuraSection() {
           </div>
 
           {/* Right Side: Visual Display */}
-          <div className="lg:col-span-7 relative h-[500px] lg:h-auto rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden p-1">
+          <div className="lg:col-span-7 relative h-[350px] lg:h-auto min-h-[350px] rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden p-1">
             <AnimatePresence mode="wait">
               {features.map(
                 (feature, index) =>
