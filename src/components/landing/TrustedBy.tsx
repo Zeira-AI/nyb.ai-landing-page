@@ -1,19 +1,42 @@
 export default function TrustedBy() {
-  const partners = ["NVIDIA", "HPE", "Equinix", "NTU"];
+  const partners = [
+    {
+      name: "NVIDIA",
+      logo: "/nvidia.svg",
+      className: "h-8 md:h-12 -translate-y-1",
+    },
+    { name: "HPE", logo: "/hpe.svg", className: "h-5 md:h-7" },
+    { name: "Equinix", logo: "/equinix.svg", className: "h-8 md:h-8" },
+    {
+      name: "NTU",
+      logo: "/ntu.svg",
+      className: "h-10 md:h-20",
+      disableFilter: true,
+    }, // Adjusted height for academic seal
+  ];
 
   return (
     <section className="py-12 border-b border-white/5">
       <div className="container mx-auto px-6">
-        <p className="text-center text-sm font-mono text-white/40 mb-8 uppercase tracking-wider">
+        <p className="text-center text-sm font-mono text-white/40 mb-10 uppercase tracking-wider">
           Supported by a global ecosystem
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
           {partners.map((partner) => (
             <div
-              key={partner}
-              className="text-xl md:text-2xl font-bold tracking-tighter hover:text-primary transition-colors cursor-default"
+              key={partner.name}
+              className="group flex items-start justify-center"
             >
-              {partner}
+              {/* Using img for SVGs to ensure correct aspect ratio display without defining explicit width/height ahead of time */}
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className={`${partner.className} w-auto object-contain ${
+                  partner.disableFilter
+                    ? "opacity-60 group-hover:opacity-100 grayscale hover:grayscale-0"
+                    : "brightness-0 invert opacity-40 group-hover:opacity-100"
+                } transition-all duration-300`}
+              />
             </div>
           ))}
         </div>

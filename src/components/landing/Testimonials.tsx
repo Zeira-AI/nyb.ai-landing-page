@@ -23,7 +23,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-24 bg-white/[0.02]">
+    <section className="py-24 bg-white/2">
       <div className="container mx-auto px-6">
         {/* Testimonial */}
         <div className="mb-24 text-center">

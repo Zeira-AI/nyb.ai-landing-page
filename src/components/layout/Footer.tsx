@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TextHoverEffect } from "../ui/text-hover-effect";
 
 export default function Footer() {
   return (
@@ -50,6 +51,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <TextHoverEffect text="NYB.ai" />
     </footer>
   );
 }

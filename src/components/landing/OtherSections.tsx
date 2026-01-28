@@ -39,7 +39,7 @@ export function LigoSpaceSection() {
           className="relative aspect-square md:aspect-video rounded-lg bg-black/50 border border-white/10 flex items-center justify-center overflow-hidden"
         >
           {/* Abstract visualization placeholder */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--primary)_0%,_transparent_70%)] opacity-20 animate-pulse-slow" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--primary)_0%,transparent_70%)] opacity-20 animate-pulse-slow" />
           <div className="text-white/20 font-mono text-sm">
             [Graph Network Visualization]
           </div>
@@ -78,9 +78,9 @@ export function VecurateSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex-1 w-full relative h-[300px] rounded-lg bg-gradient-to-br from-green-900/20 to-black border border-white/10 flex items-center justify-center overflow-hidden group"
+          className="flex-1 w-full relative h-[300px] rounded-lg bg-linear-to-br from-green-900/20 to-black border border-white/10 flex items-center justify-center overflow-hidden group"
         >
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,255,148,0.05)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-[shimmer_3s_infinite]" />
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(0,255,148,0.05)_50%,transparent_75%,transparent_100%)] bg-size-[250%_250%] animate-[shimmer_3s_infinite]" />
           <div className="text-center z-10">
             <div className="text-6xl font-bold text-white mb-2 font-mono">
               1M+

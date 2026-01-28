@@ -41,6 +41,13 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll from animations */
 }
 
+@layer base {
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
 /* Utilities for "Tech" feel */
 .glass-panel {
   background: rgba(255, 255, 255, 0.03);
