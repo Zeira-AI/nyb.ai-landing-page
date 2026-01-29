@@ -32,12 +32,12 @@ export const Partners = [
   //   logo: "/nvidia.svg",
   //   className: "h-8 md:h-12 -translate-y-1",
   // },
-  { name: "HPE", logo: "/hpe.svg", className: "h-5 md:h-7" },
+  { name: "HPE", logo: "/hpe.svg", className: "h-5 md:h-7 md:mr-16" },
   { name: "Equinix", logo: "/equinix.svg", className: "h-8 md:h-8" },
   {
     name: "NTU",
     logo: "/ntu.svg",
-    className: "h-28 md:h-20 -translate-y-4",
+    className: "h-28 md:h-20 -translate-y-4 md:-translate-y-1",
     disableFilter: true,
   }, // Adjusted height for academic seal
 ];
