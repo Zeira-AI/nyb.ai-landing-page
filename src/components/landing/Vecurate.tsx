@@ -118,7 +118,10 @@ export default function VecurateSection() {
                     ) : (
                       <>
                         {stat.prefix}
-                        <NumberTicker value={stat.value} decimalPlaces={0} />
+                        <NumberTicker
+                          value={stat.value || 0}
+                          decimalPlaces={0}
+                        />
                         {stat.suffix}
                       </>
                     )}
