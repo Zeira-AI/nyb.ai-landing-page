@@ -31,7 +31,7 @@ export default function LigoSpaceSection() {
             <img
               src="/ligospace.svg"
               alt="LigoSPACE"
-              className="h-18 md:h-12"
+              className="h-10 md:h-12"
             />
           </div>
           <h3 className="text-2xl font-light mb-6 text-white/90">
@@ -44,14 +44,14 @@ export default function LigoSpaceSection() {
             integrated into Vecura, it powers end-to-end discovery workflows
             from screening to prioritization.
           </p>
-          <div className="grid grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             {/* Stat 1 */}
             <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
               <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
                 <ArrowUp className="w-3 h-3" />
                 Pearson (r)
               </div>
-              <div className="text-3xl font-bold tracking-tight text-white">
+              <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
                 <NumberTicker value={18.39} decimalPlaces={2} />%
               </div>
               <div className="text-white/50 text-xs leading-tight">
@@ -65,7 +65,7 @@ export default function LigoSpaceSection() {
                 <ArrowDown className="w-3 h-3" />
                 RMSE
               </div>
-              <div className="text-3xl font-bold tracking-tight text-white">
+              <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
                 <NumberTicker value={9.93} decimalPlaces={2} />%
               </div>
               <div className="text-white/50 text-xs leading-tight">
@@ -79,7 +79,7 @@ export default function LigoSpaceSection() {
                 <ArrowUp className="w-3 h-3" />
                 Kendall (τ)
               </div>
-              <div className="text-3xl font-bold tracking-tight text-white">
+              <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
                 <NumberTicker value={19.09} decimalPlaces={2} />%
               </div>
               <div className="text-white/50 text-xs leading-tight">
@@ -88,7 +88,7 @@ export default function LigoSpaceSection() {
             </div>
           </div>
 
-          <div className="flex items-center gap-6 mt-2">
+          <div className="flex items-center justify-center md:justify-start gap-8 md:gap-10 mt-2">
             <Link
               href="https://ieeexplore.ieee.org/document/10645211/"
               target="_blank"
@@ -98,7 +98,7 @@ export default function LigoSpaceSection() {
               <img
                 src="/IEEE.svg"
                 alt="IEEE"
-                className="h-8 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
+                className="h-14 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
               />
             </Link>
             <Link
@@ -110,7 +110,7 @@ export default function LigoSpaceSection() {
               <img
                 src="/NeurIPS.svg"
                 alt="NeurIPS"
-                className="h-8 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
+                className="h-14 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
               />
             </Link>
           </div>

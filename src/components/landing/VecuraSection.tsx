@@ -92,7 +92,7 @@ export default function VecuraSection() {
             transition={{ delay: 0.1 }}
             className="mb-6 mt-3"
           >
-            <img src="/vecura.svg" alt="Vecura" className="h-8 md:h-12" />
+            <img src="/vecura.svg" alt="Vecura" className="h-10 md:h-12" />
           </motion.div>
 
           <motion.p
@@ -166,7 +166,7 @@ export default function VecuraSection() {
           </div>
 
           {/* Right Side: Visual Display */}
-          <div className="lg:col-span-7 relative h-[350px] lg:h-auto min-h-[350px] rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden p-1">
+          <div className="lg:col-span-7 relative h-[450px] sm:h-[400px] lg:h-auto min-h-[350px] rounded-2xl border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden p-1">
             <AnimatePresence mode="wait">
               {features.map(
                 (feature, index) =>
@@ -200,11 +200,11 @@ export default function VecuraSection() {
                       </div>
 
                       {/* Content Details */}
-                      <div className="p-8 md:p-12 border-t border-white/10 bg-black/80 lg:bg-transparent">
-                        <h3 className="text-3xl font-bold mb-4 text-white">
+                      <div className="p-4 sm:p-8 md:p-12 border-t border-white/10 bg-black/80 lg:bg-transparent">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4 text-white">
                           {feature.title}
                         </h3>
-                        <p className="text-lg text-white/70 leading-relaxed">
+                        <p className="text-sm sm:text-base md:text-lg text-white/70 leading-relaxed">
                           {feature.fullDescription}
                         </p>
                       </div>

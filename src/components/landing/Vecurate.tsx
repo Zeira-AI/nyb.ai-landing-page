@@ -19,7 +19,7 @@ export default function VecurateSection() {
             Natural Intelligence
           </span>
           <div className="mt-3 mb-6">
-            <img src="/vecurate.svg" alt="Vecurate" className="h-7 md:h-10" />
+            <img src="/vecurate.svg" alt="Vecurate" className="h-8 md:h-10" />
           </div>
           <p className="text-xl text-white/90 mb-6">
             Nature-Derived Molecules, Ready for AI
@@ -35,9 +35,9 @@ export default function VecurateSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex-1 w-full pl-6"
+          className="flex-1 w-full pl-0 md:pl-6"
         >
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Stat 1 */}
             <div className="flex flex-col justify-between gap-3 p-4 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">

@@ -37,7 +37,7 @@ export const Partners = [
   {
     name: "NTU",
     logo: "/ntu.svg",
-    className: "h-10 md:h-20",
+    className: "h-28 md:h-20 -translate-y-4",
     disableFilter: true,
   }, // Adjusted height for academic seal
 ];

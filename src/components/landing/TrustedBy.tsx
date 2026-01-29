@@ -8,7 +8,7 @@ export default function TrustedBy() {
         <p className="text-center text-sm font-mono text-white/40 mb-10 uppercase tracking-wider">
           Supported by a global ecosystem
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-8 sm:gap-12 md:gap-16">
           {partners.map((partner) => (
             <div
               key={partner.name}
