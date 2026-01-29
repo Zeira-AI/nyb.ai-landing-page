@@ -5,7 +5,19 @@ import { Meta } from "@/lib/constants";
 import { motion } from "motion/react";
 import Link from "next/link";
 
+import { useLenis } from "lenis/react";
+
 export default function Hero() {
+  const lenis = useLenis();
+
+  const handleExplore = () => {
+    if (lenis) {
+      lenis.scrollTo("#vecura", { offset: -80 });
+    } else {
+      document.getElementById("vecura")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
       {/* Background Grid */}
@@ -64,7 +76,10 @@ export default function Hero() {
           >
             TALK TO US
           </Link>
-          <button className="px-8 py-4 bg-transparent border border-white/20 text-white text-sm font-bold tracking-wide rounded-sm hover:bg-white/5 transition-colors">
+          <button
+            onClick={handleExplore}
+            className="px-8 py-4 bg-transparent border border-white/20 text-white text-sm font-bold tracking-wide rounded-sm hover:bg-white/5 transition-colors"
+          >
             EXPLORE PLATFORM
           </button>
         </motion.div>

@@ -69,7 +69,11 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo Area */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link
+          href="/"
+          onClick={(e) => handleNavClick(e, "#")}
+          className="flex items-center gap-2 group"
+        >
           <span className="font-mono text-xl tracking-tight font-bold">
             {Meta.SITE_NAME}
             <span className="text-primary">{Meta.SITE_DOMAIN}</span>

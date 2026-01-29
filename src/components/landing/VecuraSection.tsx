@@ -182,7 +182,10 @@ export default function VecuraSection() {
                       {/* Illustration Area */}
                       <div className="flex-1 relative flex items-center justify-center bg-linear-to-br from-white/5 to-transparent m-1 rounded-xl">
                         {/* Abstract Grid Elements */}
-                        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 bg-center mask-[linear-gradient(to_bottom,transparent,black,transparent)]" />
+                        <div className="absolute inset-0 z-0">
+                          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[40px_40px] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,#000_10%,transparent_100%)]" />
+                          <div className="absolute top-0 left-0 right-0 h-[500px] bg-primary/5 blur-[120px] rounded-full mix-blend-screen opacity-20 pointer-events-none" />
+                        </div>
 
                         <div className="relative z-10 p-12 rounded-full bg-linear-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-md">
                           <feature.icon
