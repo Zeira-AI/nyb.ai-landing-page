@@ -27,11 +27,11 @@ export const NAV_ITEMS = [
 ] as const;
 
 export const Partners = [
-  {
-    name: "NVIDIA",
-    logo: "/nvidia.svg",
-    className: "h-8 md:h-12 -translate-y-1",
-  },
+  // {
+  //   name: "NVIDIA",
+  //   logo: "/nvidia.svg",
+  //   className: "h-8 md:h-12 -translate-y-1",
+  // },
   { name: "HPE", logo: "/hpe.svg", className: "h-5 md:h-7" },
   { name: "Equinix", logo: "/equinix.svg", className: "h-8 md:h-8" },
   {
@@ -64,11 +64,11 @@ export const News = [
 ] as const;
 
 export const FooterPartners = [
-  {
-    name: "NVIDIA",
-    logo: "/nvidia.svg",
-    className: "h-4 md:h-6 -translate-y-1",
-  },
+  // {
+  //   name: "NVIDIA",
+  //   logo: "/nvidia.svg",
+  //   className: "h-4 md:h-6 -translate-y-1",
+  // },
   { name: "HPE", logo: "/hpe.svg", className: "h-2 md:h-4" },
   { name: "Equinix", logo: "/equinix.svg", className: "h-2 md:h-4 ml-4" },
 ];
