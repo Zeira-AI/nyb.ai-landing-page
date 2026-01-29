@@ -67,8 +67,8 @@ export const FooterPartners = [
   {
     name: "NVIDIA",
     logo: "/nvidia.svg",
-    className: "h-4 md:h-6 -translate-y-2",
+    className: "h-4 md:h-6 -translate-y-1",
   },
   { name: "HPE", logo: "/hpe.svg", className: "h-2 md:h-4" },
-  { name: "Equinix", logo: "/equinix.svg", className: "h-2 md:h-4" },
+  { name: "Equinix", logo: "/equinix.svg", className: "h-2 md:h-4 ml-4" },
 ];

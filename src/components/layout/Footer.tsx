@@ -9,37 +9,8 @@ export default function Footer() {
   return (
     <footer className="py-20 border-t border-white/10 bg-black">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 mb-20">
-          <div>
-            <FooterConnect />
-          </div>
-          <div className="flex flex-col justify-between">
-            <div className="space-y-4">
-              <h3 className="text-sm font-mono text-white/40 uppercase tracking-wider">
-                Secure Infrastructure
-              </h3>
-              <p className="text-white/60 max-w-md mb-6">
-                Our AI infrastructure is built for life sciences, combining
-                scientific rigor, data integrity, and enterprise-grade security.
-                Powered by NVIDIA, HPE, Equinix.
-              </p>
-              <div className="flex flex-wrap justify-start gap-8">
-                {partners.map((partner) => (
-                  <div
-                    key={partner.name}
-                    className="group flex items-start justify-center"
-                  >
-                    {/* Using img for SVGs to ensure correct aspect ratio display without defining explicit width/height ahead of time */}
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className={`${partner.className} w-auto object-contain brightness-0 invert opacity-40 group-hover:opacity-100 transition-all duration-300`}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="mb-20">
+          <FooterConnect />
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
