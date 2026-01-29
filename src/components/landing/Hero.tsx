@@ -1,7 +1,9 @@
 "use client";
 
 import { Spotlight } from "@/components/ui/spotlight-new";
+import { Meta } from "@/lib/constants";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -54,9 +56,14 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex items-center justify-center gap-4"
         >
-          <button className="px-8 py-4 bg-white text-black text-sm font-bold tracking-wide rounded-sm hover:bg-gray-200 transition-colors">
+          <Link
+            href={`mailto:${Meta.COMPANY_EMAIL}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-white text-black text-sm font-bold tracking-wide rounded-sm hover:bg-gray-200 transition-colors"
+          >
             TALK TO US
-          </button>
+          </Link>
           <button className="px-8 py-4 bg-transparent border border-white/20 text-white text-sm font-bold tracking-wide rounded-sm hover:bg-white/5 transition-colors">
             EXPLORE PLATFORM
           </button>

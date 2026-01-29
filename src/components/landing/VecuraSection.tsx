@@ -181,7 +181,7 @@ export default function VecuraSection() {
                       {/* Illustration Area */}
                       <div className="flex-1 relative flex items-center justify-center bg-linear-to-br from-white/5 to-transparent m-1 rounded-xl">
                         {/* Abstract Grid Elements */}
-                        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 bg-center [mask-image:linear-gradient(to_bottom,transparent,black,transparent)]" />
+                        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-20 bg-center mask-[linear-gradient(to_bottom,transparent,black,transparent)]" />
 
                         <div className="relative z-10 p-12 rounded-full bg-linear-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-md">
                           <feature.icon
@@ -197,14 +197,6 @@ export default function VecuraSection() {
 
                       {/* Content Details */}
                       <div className="p-8 md:p-12 border-t border-white/10 bg-black/80 lg:bg-transparent">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="p-2 rounded bg-primary/10 border border-primary/20">
-                            <feature.icon className="w-5 h-5 text-primary" />
-                          </div>
-                          <span className="font-mono text-primary text-sm uppercase tracking-wider">
-                            Step {feature.id}
-                          </span>
-                        </div>
                         <h3 className="text-3xl font-bold mb-4 text-white">
                           {feature.title}
                         </h3>

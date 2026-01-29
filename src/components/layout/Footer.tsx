@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { TextHoverEffect } from "../ui/text-hover-effect";
+import { Meta } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -11,7 +12,9 @@ export default function Footer() {
               Where your next breakthrough begins.
             </h2>
             <Link
-              href="#demo"
+              href={`mailto:${Meta.COMPANY_EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-8 py-4 bg-primary text-black font-bold rounded-sm hover:bg-white transition-colors"
             >
               Book a Demo
@@ -33,25 +36,36 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <div className="w-6 h-6 bg-primary/20 rounded-xs flex items-center justify-center border border-primary/50">
-              <div className="w-3 h-3 bg-primary rounded-xs" />
-            </div>
-            <span className="font-bold text-white">NYB.ai</span>
+            <span className="font-bold text-white">
+              {Meta.SITE_NAME}
+              <span className="text-primary">{Meta.SITE_DOMAIN}</span>
+            </span>
           </div>
           <div className="text-white/40 text-sm">
-            &copy; 2026 NYB AI. All rights reserved.
+            &copy; {new Date().getFullYear()} {Meta.SITE_NAME}
+            {Meta.SITE_DOMAIN}. All rights reserved.
           </div>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <Link href="#" className="text-white/60 hover:text-white text-sm">
+            <Link
+              href={`mailto:${Meta.COMPANY_EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white text-sm"
+            >
               Connect
             </Link>
-            <Link href="#" className="text-white/60 hover:text-white text-sm">
+            <Link
+              href={Meta.LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/60 hover:text-white text-sm"
+            >
               LinkedIn
             </Link>
           </div>
         </div>
       </div>
-      <TextHoverEffect text="NYB.ai" />
+      <TextHoverEffect text={`${Meta.SITE_NAME}${Meta.SITE_DOMAIN}`} />
     </footer>
   );
 }

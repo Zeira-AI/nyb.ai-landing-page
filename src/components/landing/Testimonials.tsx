@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { Meta } from "@/lib/constants";
 
 export default function Testimonials() {
   const news = [
@@ -41,7 +42,9 @@ export default function Testimonials() {
           </div>
           <div className="mt-8">
             <Link
-              href="#"
+              href={`mailto:${Meta.COMPANY_EMAIL}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-primary hover:text-white transition-colors border-b border-primary/30 hover:border-white pb-1"
             >
               Request Case Study
