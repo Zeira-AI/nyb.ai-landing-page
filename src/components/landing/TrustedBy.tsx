@@ -1,20 +1,6 @@
-export default function TrustedBy() {
-  const partners = [
-    {
-      name: "NVIDIA",
-      logo: "/nvidia.svg",
-      className: "h-8 md:h-12 -translate-y-1",
-    },
-    { name: "HPE", logo: "/hpe.svg", className: "h-5 md:h-7" },
-    { name: "Equinix", logo: "/equinix.svg", className: "h-8 md:h-8" },
-    {
-      name: "NTU",
-      logo: "/ntu.svg",
-      className: "h-10 md:h-20",
-      disableFilter: true,
-    }, // Adjusted height for academic seal
-  ];
+import { Partners as partners } from "@/lib/constants";
 
+export default function TrustedBy() {
   return (
     <section className="py-12 border-b border-white/5">
       <div className="container mx-auto px-6">
@@ -32,7 +18,7 @@ export default function TrustedBy() {
                 src={partner.logo}
                 alt={partner.name}
                 className={`${partner.className} w-auto object-contain ${
-                  partner.disableFilter
+                  partner?.disableFilter
                     ? "opacity-60 group-hover:opacity-100 grayscale hover:grayscale-0"
                     : "brightness-0 invert opacity-40 group-hover:opacity-100"
                 } transition-all duration-300`}

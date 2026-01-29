@@ -7,7 +7,8 @@ import {
   LigoSpaceSection,
   VecurateSection,
 } from "@/components/landing/OtherSections";
-import Testimonials from "@/components/landing/Testimonials";
+import News from "@/components/landing/News";
+import CustomerVoice from "@/components/landing/CustomerVoice";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       <VecuraSection />
       <LigoSpaceSection />
       <VecurateSection />
-      <Testimonials />
+      <News />
+      <CustomerVoice />
       <Footer />
     </main>
   );
