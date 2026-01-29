@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
+import { NumberTicker } from "@/components/ui/number-ticker";
+import { ArrowUp, ArrowDown } from "lucide-react";
+import Link from "next/link";
 
 export default function LigoSpaceSection() {
   return (
@@ -34,8 +37,75 @@ export default function LigoSpaceSection() {
             beyond conventional approaches. It is natively integrated into
             Vecura to power end-to-end discovery workflows.
           </p>
-          <div className="inline-block px-4 py-2 border border-white/20 rounded-sm text-xs font-mono text-white/70">
-            Research published on IEEE and NeurIPS
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            {/* Stat 1 */}
+            <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
+              <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
+                <ArrowUp className="w-3 h-3" />
+                Pearson (r)
+              </div>
+              <div className="text-3xl font-bold tracking-tight text-white">
+                <NumberTicker value={18.39} decimalPlaces={2} />%
+              </div>
+              <div className="text-white/50 text-xs leading-tight">
+                Bioactivity Prediction
+              </div>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
+              <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
+                <ArrowDown className="w-3 h-3" />
+                RMSE
+              </div>
+              <div className="text-3xl font-bold tracking-tight text-white">
+                <NumberTicker value={9.93} decimalPlaces={2} />%
+              </div>
+              <div className="text-white/50 text-xs leading-tight">
+                Accuracy Improvement
+              </div>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
+              <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
+                <ArrowUp className="w-3 h-3" />
+                Kendall (τ)
+              </div>
+              <div className="text-3xl font-bold tracking-tight text-white">
+                <NumberTicker value={19.09} decimalPlaces={2} />%
+              </div>
+              <div className="text-white/50 text-xs leading-tight">
+                Ligand Ranking
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-6 mt-2">
+            <Link
+              href="https://ieeexplore.ieee.org/document/10645211/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <img
+                src="/IEEE.svg"
+                alt="IEEE"
+                className="h-8 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
+              />
+            </Link>
+            <Link
+              href="https://neurips.cc/virtual/2025/loc/san-diego/poster/117890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center"
+            >
+              <img
+                src="/NeurIPS.svg"
+                alt="NeurIPS"
+                className="h-8 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
+              />
+            </Link>
           </div>
         </motion.div>
         <motion.div
@@ -48,7 +118,7 @@ export default function LigoSpaceSection() {
           {/* Abstract visualization placeholder */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--primary)_0%,transparent_70%)] opacity-20 animate-pulse-slow" />
           <div className="text-white/20 font-mono text-sm">
-            [Graph Network Visualization]
+            [3D Protein Display]
           </div>
         </motion.div>
       </div>

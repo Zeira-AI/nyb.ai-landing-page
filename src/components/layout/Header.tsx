@@ -85,7 +85,7 @@ export default function Header() {
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.href.substring(1);
             return (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
@@ -104,7 +104,7 @@ export default function Header() {
                     isActive && "scale-105",
                   )}
                 />
-              </a>
+              </Link>
             );
           })}
         </nav>
