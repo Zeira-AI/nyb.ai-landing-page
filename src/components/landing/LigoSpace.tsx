@@ -52,7 +52,7 @@ export default function LigoSpaceSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-primary font-mono text-sm tracking-wider uppercase"
           >
-            Proprietary Predictive Engine
+            Proprietary Predictive Model
           </motion.span>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -74,7 +74,7 @@ export default function LigoSpaceSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-2xl font-light mb-6 text-white/90"
           >
-            Deep Learning for Molecular Mechanisms
+            AI for Drug Target Interaction
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
