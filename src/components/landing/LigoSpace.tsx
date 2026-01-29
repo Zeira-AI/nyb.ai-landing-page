@@ -3,7 +3,13 @@
 import { motion } from "motion/react";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { ArrowUp, ArrowDown } from "lucide-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const MoleculeViewer = dynamic(() => import("./MoleculeViewer"), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-black/20 animate-pulse" />,
+});
 
 export default function LigoSpaceSection() {
   return (
@@ -32,10 +38,11 @@ export default function LigoSpaceSection() {
             Deep Learning for Molecular Mechanisms
           </h3>
           <p className="text-white/60 leading-relaxed mb-8">
-            LigoSPACE applies graph-based deep learning to model compound–target
-            interactions with biological context, delivering predictive accuracy
-            beyond conventional approaches. It is natively integrated into
-            Vecura to power end-to-end discovery workflows.
+            LigoSPACE is our state-of-the-art graph deep learning engine for
+            drug–target interaction and bioactivity prediction, capturing
+            biological context to deliver high-precision results. Natively
+            integrated into Vecura, it powers end-to-end discovery workflows
+            from screening to prioritization.
           </p>
           <div className="grid grid-cols-3 gap-4 mb-10">
             {/* Stat 1 */}
@@ -115,10 +122,12 @@ export default function LigoSpaceSection() {
           transition={{ duration: 0.8 }}
           className="relative aspect-square md:aspect-video rounded-lg bg-black/50 border border-white/10 flex items-center justify-center overflow-hidden"
         >
-          {/* Abstract visualization placeholder */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--primary)_0%,transparent_70%)] opacity-20 animate-pulse-slow" />
-          <div className="text-white/20 font-mono text-sm">
-            [3D Protein Display]
+          {/* 3D Protein Display */}
+          <div className="absolute inset-0">
+            <MoleculeViewer
+              url="/7S61-COMPOUND_CID_64982-d4xxf_DOCKED.pdb"
+              className="w-full h-full"
+            />
           </div>
         </motion.div>
       </div>

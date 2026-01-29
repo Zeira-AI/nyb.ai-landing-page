@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NYB - Democratizing AI for Life Science",
+  title: "NYB.AI - Democratizing AI for Life Science",
   description: "Advanced AI accessible across every layer of life science R&D.",
 };
 
