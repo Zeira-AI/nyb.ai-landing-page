@@ -11,6 +11,27 @@ const MoleculeViewer = dynamic(() => import("./MoleculeViewer"), {
   loading: () => <div className="w-full h-full bg-black/20 animate-pulse" />,
 });
 
+const stats = [
+  {
+    icon: ArrowUp,
+    label: "Pearson (r)",
+    value: 18.39,
+    description: "Bioactivity Prediction",
+  },
+  {
+    icon: ArrowDown,
+    label: "RMSE",
+    value: 9.93,
+    description: "Accuracy Improvement",
+  },
+  {
+    icon: ArrowUp,
+    label: "Kendall (τ)",
+    value: 19.09,
+    description: "Ligand Ranking",
+  },
+];
+
 export default function LigoSpaceSection() {
   return (
     <section
@@ -24,71 +45,97 @@ export default function LigoSpaceSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-primary font-mono text-sm tracking-wider uppercase">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-primary font-mono text-sm tracking-wider uppercase"
+          >
             Proprietary Predictive Engine
-          </span>
-          <div className="mt-3 mb-6">
+          </motion.span>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-3 mb-6"
+          >
             <img
               src="/ligospace.svg"
               alt="LigoSPACE"
               className="h-10 md:h-12"
             />
-          </div>
-          <h3 className="text-2xl font-light mb-6 text-white/90">
+          </motion.div>
+          <motion.h3
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-2xl font-light mb-6 text-white/90"
+          >
             Deep Learning for Molecular Mechanisms
-          </h3>
-          <p className="text-white/60 leading-relaxed mb-8">
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-white/60 leading-relaxed mb-8"
+          >
             LigoSPACE is our state-of-the-art graph deep learning engine for
             drug–target interaction and bioactivity prediction, capturing
             biological context to deliver high-precision results. Natively
             integrated into Vecura, it powers end-to-end discovery workflows
             from screening to prioritization.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-            {/* Stat 1 */}
-            <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
-              <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
-                <ArrowUp className="w-3 h-3" />
-                Pearson (r)
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                <NumberTicker value={18.39} decimalPlaces={2} />%
-              </div>
-              <div className="text-white/50 text-xs leading-tight">
-                Bioactivity Prediction
-              </div>
-            </div>
+          </motion.p>
 
-            {/* Stat 2 */}
-            <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
-              <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
-                <ArrowDown className="w-3 h-3" />
-                RMSE
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                <NumberTicker value={9.93} decimalPlaces={2} />%
-              </div>
-              <div className="text-white/50 text-xs leading-tight">
-                Accuracy Improvement
-              </div>
-            </div>
+          {/* Stats with stagger animation */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.1,
+                  delayChildren: 0.5,
+                },
+              },
+            }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10"
+          >
+            {stats.map((stat) => (
+              <motion.div
+                key={stat.label}
+                variants={{
+                  hidden: { opacity: 0, y: 20, scale: 0.95 },
+                  show: { opacity: 1, y: 0, scale: 1 },
+                }}
+                className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm"
+              >
+                <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
+                  <stat.icon className="w-3 h-3" />
+                  {stat.label}
+                </div>
+                <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
+                  <NumberTicker value={stat.value} decimalPlaces={2} />%
+                </div>
+                <div className="text-white/50 text-xs leading-tight">
+                  {stat.description}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
 
-            {/* Stat 3 */}
-            <div className="flex flex-col gap-1 p-3 rounded-lg bg-white/5 border border-white/10 backdrop-blur-sm">
-              <div className="flex items-center gap-2 text-primary text-xs font-mono uppercase tracking-wider">
-                <ArrowUp className="w-3 h-3" />
-                Kendall (τ)
-              </div>
-              <div className="text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                <NumberTicker value={19.09} decimalPlaces={2} />%
-              </div>
-              <div className="text-white/50 text-xs leading-tight">
-                Ligand Ranking
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-center md:justify-start gap-8 md:gap-10 mt-2">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="flex items-center justify-center md:justify-start gap-8 md:gap-10 mt-2"
+          >
             <Link
               href="https://ieeexplore.ieee.org/document/10645211/"
               target="_blank"
@@ -113,13 +160,13 @@ export default function LigoSpaceSection() {
                 className="h-14 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-all duration-300"
               />
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
           className="relative aspect-square md:aspect-video rounded-lg bg-black/50 border border-white/10 flex items-center justify-center overflow-hidden"
         >
           {/* 3D Protein Display */}
