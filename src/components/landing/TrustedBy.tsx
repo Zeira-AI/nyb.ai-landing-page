@@ -1,4 +1,5 @@
 import { Partners as partners } from "@/lib/constants";
+import Image from "next/image";
 
 export default function TrustedBy() {
   return (

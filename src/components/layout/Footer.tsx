@@ -3,6 +3,7 @@ import { TextHoverEffect } from "../ui/text-hover-effect";
 import { Meta } from "@/lib/constants";
 import { FooterConnect } from "./FooterConnect";
 import { FooterPartners as partners } from "@/lib/constants";
+import Image from "next/image";
 
 export default function Footer() {
   return (

@@ -10,6 +10,7 @@ import {
   Microscope,
   Briefcase,
 } from "lucide-react";
+import Image from "next/image";
 
 const features = [
   {
@@ -85,14 +86,14 @@ export default function VecuraSection() {
             </span>
           </motion.div>
 
-          <motion.h2
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold mb-4 tracking-tight"
+            className="mb-6 mt-3"
           >
-            VECURA<span className="text-primary">.</span>
-          </motion.h2>
+            <img src="/vecura.svg" alt="Vecura" className="h-8 md:h-12" />
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

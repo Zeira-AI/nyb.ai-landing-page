@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import { News as news } from "@/lib/constants";
+import Image from "next/image";
 
 export default function News() {
   return (
@@ -56,7 +57,7 @@ export default function News() {
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
