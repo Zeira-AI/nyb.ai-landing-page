@@ -5,6 +5,27 @@ export const Meta = {
   COMPANY_EMAIL: "office@nanyangbiologics.com",
 } as const;
 
+export const NAV_ITEMS = [
+  {
+    name: "Vecura",
+    logo: "/vecura.svg",
+    href: "#vecura",
+    className: "h-4 md:h-4 w-auto -translate-y-1",
+  },
+  {
+    name: "LigoSpace",
+    logo: "/ligospace.svg",
+    href: "#ligospace",
+    className: "h-4 md:h-4 w-auto",
+  },
+  {
+    name: "Vecurate",
+    logo: "/vecurate.svg",
+    href: "#vecurate",
+    className: "h-4 md:h-3 w-auto -translate-y-0.25",
+  },
+] as const;
+
 export const Partners = [
   {
     name: "NVIDIA",
@@ -50,10 +71,4 @@ export const FooterPartners = [
   },
   { name: "HPE", logo: "/hpe.svg", className: "h-2 md:h-4" },
   { name: "Equinix", logo: "/equinix.svg", className: "h-2 md:h-4" },
-  {
-    name: "NTU",
-    logo: "/ntu.svg",
-    className: "h-6 md:h-16 -translate-y-6",
-    disableFilter: true,
-  }, // Adjusted height for academic seal
 ];

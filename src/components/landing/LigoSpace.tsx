@@ -4,7 +4,10 @@ import { motion } from "motion/react";
 
 export default function LigoSpaceSection() {
   return (
-    <section className="py-24 bg-white/5 border-y border-white/5">
+    <section
+      id="ligospace"
+      className="py-24 bg-white/5 border-y border-white/5"
+    >
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -20 }}

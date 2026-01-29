@@ -5,7 +5,7 @@ import { Meta } from "@/lib/constants";
 
 export default function CustomerVoice() {
   return (
-    <section className="py-24 bg-white/2">
+    <section id="company" className="py-24 bg-white/2">
       <div className="container mx-auto px-6">
         {/* Testimonial */}
         <div className="mb-24 text-center">

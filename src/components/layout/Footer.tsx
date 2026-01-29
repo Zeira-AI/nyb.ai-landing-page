@@ -18,7 +18,7 @@ export default function Footer() {
               <h3 className="text-sm font-mono text-white/40 uppercase tracking-wider">
                 Secure Infrastructure
               </h3>
-              <p className="text-white/60 max-w-md mb-8">
+              <p className="text-white/60 max-w-md mb-6">
                 Our AI infrastructure is built for life sciences, combining
                 scientific rigor, data integrity, and enterprise-grade security.
                 Powered by NVIDIA, HPE, Equinix.
@@ -33,11 +33,7 @@ export default function Footer() {
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className={`${partner.className} w-auto object-contain ${
-                        partner?.disableFilter
-                          ? "opacity-60 group-hover:opacity-100 grayscale hover:grayscale-0"
-                          : "brightness-0 invert opacity-40 group-hover:opacity-100"
-                      } transition-all duration-300`}
+                      className={`${partner.className} w-auto object-contain brightness-0 invert opacity-40 group-hover:opacity-100 transition-all duration-300`}
                     />
                   </div>
                 ))}

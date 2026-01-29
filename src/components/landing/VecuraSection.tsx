@@ -65,7 +65,7 @@ export default function VecuraSection() {
 
   return (
     <section
-      id="platform"
+      id="vecura"
       className="py-12 md:py-16 relative overflow-hidden bg-background"
     >
       {/* Background Elements */}

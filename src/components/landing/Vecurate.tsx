@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function VecurateSection() {
   return (
-    <section className="py-24">
+    <section id="vecurate" className="py-24">
       <div className="container mx-auto px-6 flex flex-col md:flex-row-reverse gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
