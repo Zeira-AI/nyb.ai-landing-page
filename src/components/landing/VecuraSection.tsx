@@ -99,7 +99,7 @@ export default function VecuraSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-base md:text-lg text-white/60 max-w-2xl leading-relaxed"
+            className="text-2xl font-light mb-6 text-white/90"
           >
             A complete, end-to-end AI operating system for life science
             innovation. From target to clinic, simplified.
